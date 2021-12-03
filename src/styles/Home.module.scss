@@ -1,0 +1,181 @@
+.Container {
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	background: url('/background-home-desktop.jpg') no-repeat center;
+	background-size: cover;
+
+	.boxItens {
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		padding: 2rem 2rem;
+		justify-content: space-between;
+
+		margin: 0 auto;
+		.text {
+			// max-width: 450px;
+			margin-bottom: 4rem;
+			position: relative;
+			// bottom: -500px;
+			align-self: end;
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+
+			h3 {
+				font-family: 'Bellefair', sans-serif;
+				font-weight: 400;
+				color: white;
+				font-size: 9rem;
+				margin: 1rem 0;
+			}
+
+			strong {
+				font-family: 'Barlow Condensed', sans-serif;
+				font-weight: 400;
+				color: var(--light-blue);
+				font-size: 1.5rem;
+				letter-spacing: 0.5vw;
+			}
+
+			p {
+				font-family: 'Barlow', sans-serif;
+				color: var(--light-blue);
+				font-size: 0.9rem;
+				// letter-spacing: 0.25vw;
+				line-height: 2;
+				max-width: 450px;
+			}
+		}
+
+		.circle {
+			// position: relative;
+			margin-bottom: 4rem;
+			// margin: auto auto 8rem auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-self: flex-end;
+			justify-self: right;
+			width: 16rem;
+			// position: fixed;
+			height: 16rem;
+
+			border-radius: 50%;
+			background: white;
+			border: none;
+			cursor: pointer;
+			z-index: 1;
+			transition: 2s;
+			&:hover {
+				&::before {
+					transition: opacity 5s linear, transform 0.75s ease-in-out;
+					position: absolute;
+					content: '';
+					width: 26rem;
+					height: 26rem;
+					background: rgba(151, 151, 151, 0.15);
+					border-radius: 50%;
+					z-index: -1;
+					opacity: 1;
+				}
+			}
+
+			h4 {
+				color: var(--dark-sec);
+				font-family: 'Bellefair', sans-serif;
+				font-size: 2.5rem;
+				font-weight: 400;
+			}
+		}
+	}
+	@media (max-width: 1024px) {
+		background: url('/assets/home/background-home-tablet.jpg') no-repeat center;
+		background-size: cover;
+		.boxItens {
+			display: grid;
+			grid-template-rows: 1fr 1.5fr;
+			grid-template-columns: none;
+			justify-content: space-between;
+			// align-items: center;
+			// margin-top: 6rem;
+			// align-self: center;
+			position: relative;
+			bottom: -100px;
+			padding: 0;
+			gap: 2rem;
+			// justify-content: space-around;
+
+			.text {
+				// justify-self: flex-start;
+				margin: 0;
+				text-align: center;
+			}
+			.circle {
+				width: 14rem;
+				height: 14rem;
+				margin: 0 auto;
+				align-self: center;
+				justify-self: end;
+
+				&:hover {
+					&::before {
+						width: 18rem;
+						height: 18rem;
+					}
+				}
+
+				h4 {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 552px) {
+		background: url('/assets/home/background-home-mobile.jpg') no-repeat center;
+		background-size: cover;
+
+		.boxItens {
+			margin: 0 auto 0 auto;
+			bottom: -60px;
+			.text {
+				bottom: -40px;
+				h3 {
+					font-size: 6rem;
+				}
+
+				strong {
+					font-size: 1.2rem;
+				}
+				p {
+					font-size: 1rem;
+					line-height: 2.5;
+					max-width: 350px;
+				}
+			}
+
+			.circle {
+				width: 8rem;
+				height: 8rem;
+				margin: 0 auto;
+				&:hover {
+					&::before {
+						width: 12rem;
+						height: 12rem;
+					}
+				}
+
+				h4 {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		nav {
+			display: none;
+		}
+	}
+}

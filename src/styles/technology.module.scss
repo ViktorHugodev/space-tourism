@@ -1,0 +1,172 @@
+.Container {
+	background: url('/assets/technology/background-technology-desktop.jpg')
+		no-repeat center;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	// justify-content: space-evenly;
+	// align-items: center;
+	margin: 0 auto;
+	.main {
+		margin: auto auto;
+		max-width: 1440px;
+		display: flex;
+		// justify-content: space-around;
+		align-items: center;
+		gap: 5rem;
+		.tech {
+			position: relative;
+			width: 515px;
+			height: 527px;
+			display: flex;
+
+			.image2 {
+				display: none;
+				// width: 100%;
+			}
+		}
+
+		ul {
+			li {
+				list-style: none;
+				margin: 0.5rem 0 0.5rem 4rem;
+				// max-width: 80px;
+				button {
+					height: 80px;
+					width: 80px;
+					border-radius: 50%;
+					border: 1px solid rgba(255, 255, 255, 0.5);
+					font-size: 2rem;
+					background: transparent;
+					color: white;
+					font-family: 'Bellefair', sans-serif;
+					cursor: pointer;
+					&:hover {
+						border: 1px solid rgba(255, 255, 255, 1);
+					}
+					&.active {
+						background: white;
+						color: black;
+					}
+				}
+			}
+		}
+
+		.text {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			span {
+				text-transform: uppercase;
+
+				font-size: 1rem;
+				color: var(--light-blue);
+				font-family: 'Barlow Condensed', sans-serif;
+				font-weight: 400;
+			}
+			strong {
+				text-transform: uppercase;
+
+				font-size: 3.5rem;
+				color: #fff;
+				font-family: 'Bellefair', sans-serif;
+				font-weight: 400;
+			}
+			p {
+				font-size: 1rem;
+				font-family: 'Barlow', sans-serif;
+				font-weight: 400;
+				color: var(--light-blue);
+				max-width: 440px;
+				letter-spacing: 1.4px;
+			}
+		}
+	}
+
+	@media (max-width: 920px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.main {
+			ul {
+				li {
+					display: flex;
+
+					margin: 2rem 1rem;
+				}
+			}
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			gap: 2rem;
+			align-items: center;
+			justify-content: center;
+			.tech {
+				top: 20px;
+				width: 100vw;
+				height: 310px;
+				order: 1;
+
+				.image {
+					display: none;
+				}
+				.image2 {
+					display: block;
+				}
+			}
+			.text {
+				text-align: center;
+				order: 3;
+				span {
+					font-size: 1rem;
+				}
+				strong {
+					font-size: 2.5rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+			}
+			.buttons {
+				position: relative;
+				align-items: center;
+
+				display: flex;
+				order: 2;
+				button {
+					height: 58px;
+					width: 58px;
+					z-index: 1;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 580px) {
+		.main {
+			.tech {
+				height: 170px;
+			}
+
+			.text {
+				max-width: 90%;
+				strong {
+					font-size: 1.5rem;
+				}
+				p {
+					font-size: 0.9rem;
+				}
+			}
+
+			.buttons {
+				button {
+					height: 40px;
+					width: 40px;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,324 @@
+.Container {
+	height: 100vh;
+	width: 100vw;
+
+	margin: 0 auto;
+	background: url('/assets/destination/background-destination-desktop.jpg')
+		no-repeat center;
+
+	background-size: cover;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+
+	h3 {
+		font-family: 'Barlow Condensed', sans-serif;
+		color: #ffff;
+		font-size: 1.2rem;
+		display: block;
+		text-transform: uppercase;
+		font-weight: 400;
+		letter-spacing: 4.7px;
+		position: fixed;
+		justify-self: flex-start;
+		align-self: flex-start;
+		top: 120px;
+		left: 100px;
+		// min-width: 20rem;
+	}
+
+	.main {
+		padding: 4rem;
+		// margin-top: 18rem;
+		position: relative;
+		align-content: center;
+		text-align: center;
+		display: flex;
+		grid-template-columns: 1fr 1fr;
+
+		justify-content: space-around;
+		align-items: center;
+		color: white;
+		.planet {
+			// margin-left: 4rem;
+			display: flex;
+
+			img {
+				width: 28rem;
+				height: 28rem;
+			}
+		}
+
+		.info {
+			display: grid;
+			margin-left: 4rem;
+
+			grid-template-rows: repeat(100px);
+			max-width: 28rem;
+			// position: absolute;
+			// bottom: 200px;
+			p {
+				font-weight: 400;
+				color: var(--light-blue);
+				font-size: 1rem;
+				line-height: 2;
+				text-align: left;
+			}
+			h2 {
+				margin: 2rem 0;
+				font-size: 6rem;
+				font-family: 'Bellefair';
+				text-transform: uppercase;
+				font-weight: 400;
+				letter-spacing: 2.5px;
+				// padding: 2rem;
+				text-align: left;
+			}
+			ul {
+				list-style: none;
+				display: grid;
+				grid-template-columns: 80px 80px 80px 80px;
+				button {
+					text-align: left;
+					padding: 1rem;
+					font-weight: 400;
+					font-size: 1rem;
+					letter-spacing: 2.7px;
+					font-family: 'Barlow Condensed', sans-serif;
+					cursor: pointer;
+					border: none;
+
+					color: var(--light-blue);
+					background: none;
+					text-transform: uppercase;
+					// padding: 1rem;
+
+					&:hover {
+						filter: brightness(0.8);
+						color: #fff;
+
+						&::before {
+							content: '';
+							height: 3px;
+							width: 60%;
+							text-align: left;
+							position: absolute;
+							bottom: -3px;
+							background: white;
+						}
+					}
+					&.Active {
+						border-bottom: 3px solid white;
+
+						// border-bottom-width: thin;
+					}
+				}
+			}
+
+			.subinfos {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				text-transform: uppercase;
+				margin-top: 2rem;
+				@media (max-width: 420px) {
+					.distance {
+						margin: 0 auto;
+						span {
+							font-size: 1rem;
+							text-align: center;
+						}
+						strong {
+							text-align: center;
+							margin-top: 0;
+							font-size: 1.75rem;
+						}
+					}
+					display: flex;
+
+					// justify-content: center;
+				}
+				&::before {
+					content: '';
+					height: 1px;
+					width: 28rem;
+					position: absolute;
+
+					background: rgba(151, 151, 151, 0.2);
+				}
+				.distance {
+					margin-top: 2rem;
+					display: flex;
+					flex-direction: column;
+					text-align: left;
+
+					span {
+						font-family: 'Barlow Condensed', sans-serif;
+						color: var(--light-blue);
+						font-size: 0.8rem;
+						letter-spacing: 2.3px;
+					}
+
+					strong {
+						font-weight: normal;
+						font-family: 'Bellefair', sans-serif;
+						margin-top: 0.75rem;
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		background: url('/assets/destination/background-destination-tablet.jpg')
+			no-repeat center;
+		background-size: cover;
+		// overflow: hidden !important;
+		// height: 100vh;
+		margin: 0 auto;
+		display: grid;
+
+		// grid-template-columns: 1fr 1fr;
+		h3 {
+			position: relative;
+			top: 80px;
+			left: 2rem;
+			font-size: 1.2rem;
+		}
+
+		.main {
+			gap: 4rem;
+			// display: flex;
+			// flex-direction: column;
+			justify-content: center;
+			margin: 0 auto;
+			// margin-top: 6rem;
+			align-items: center;
+			padding: 4rem 0;
+			.planet {
+				// margin: 6rem auto;
+				img {
+					max-height: 18rem;
+				}
+			}
+			.info {
+				max-width: 36rem;
+				text-align: center;
+				margin: 0 auto;
+
+				h2 {
+					margin: 0;
+					text-align: center;
+				}
+				p {
+					text-align: center;
+				}
+
+				ul {
+					li {
+						text-align: center;
+					}
+					// text-align: center;
+					margin: 0 auto;
+				}
+				.planetList {
+					text-align: center;
+				}
+			}
+			.subinfos {
+				.distance {
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.Container {
+			background: url('/assets/destination/background-destination-mobile.jpg')
+				no-repeat center;
+			background-size: cover;
+			// display: flex;
+			align-items: center;
+			flex-direction: column;
+			// height: 100vh;
+			// width: 100vw;
+		}
+
+		h3 {
+			margin-left: 1rem;
+			top: 120px;
+		}
+		.main {
+			.info {
+				ul {
+					margin: 0 auto;
+				}
+			}
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			// height: 100vh;
+			// width: 100vw;
+			.planet {
+				position: relative;
+				// bottom: -60px;
+				max-width: 20rem;
+				max-height: 20rem;
+			}
+		}
+
+		.info {
+			width: 90%;
+		}
+	}
+
+	@media (max-width: 420px) {
+		.Container {
+			background: url('/assets/destination/background-destination-mobile.jpg')
+				no-repeat center;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		h3 {
+			position: sticky;
+			font-size: 1rem;
+			margin: 0 auto;
+			top: 100px;
+		}
+		.main {
+			.info {
+				h2 {
+					font-size: 3.5rem;
+				}
+				p {
+					font-size: 0.95rem;
+					line-height: 1.75;
+				}
+				.planetList {
+					font-size: 1rem;
+				}
+			}
+			.planet {
+				max-height: 10rem;
+				max-width: 10rem;
+				bottom: -60px;
+			}
+			.subinfos {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				position: relative;
+				.distance {
+					position: relative;
+					top: -10px;
+				}
+			}
+		}
+	}
+}
