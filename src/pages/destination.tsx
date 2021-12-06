@@ -17,20 +17,21 @@ export default function Destionation() {
         <Head>
           <title>{destinationData.name}</title>
         </Head>
-        <h3>Pick your destination</h3>
+        <h1>Pick your destination</h1>
         <main className={styles.main}>
-          <section className={styles.planet}>
+          <div className={styles.planet}>
             <Image
               src={destinationData.images.png}
               alt="Moon image"
               objectFit="cover"
               height="450px"
               width="450px"
+              priority
               // layout="fill"
               className={styles.ImgPlanet}
 
             />
-          </section>
+          </div>
           <section className={styles.info}>
 
             <ul className={styles.planetList}>

@@ -199,7 +199,7 @@
 			}
 			.bio {
 				position: relative;
-				top: -180px;
+				top: -210px;
 				order: 2;
 
 				span {
@@ -217,9 +217,9 @@
 					max-width: 90%;
 				}
 				ul {
-					position: fixed;
+					position: relative;
 					order: 1;
-					top: calc(58%);
+					top: -45px;
 				}
 			}
 		}

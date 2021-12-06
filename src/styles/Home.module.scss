@@ -117,6 +117,8 @@
 				width: 14rem;
 				height: 14rem;
 				margin: 0 auto;
+				position: relative;
+				top: calc(-10%);
 				align-self: center;
 				justify-self: end;
 
@@ -137,7 +139,7 @@
 	@media (max-width: 552px) {
 		background: url('/assets/home/background-home-mobile.jpg') no-repeat center;
 		background-size: cover;
-
+		min-height: 100vh;
 		.boxItens {
 			margin: 0 auto 0 auto;
 			bottom: -60px;
@@ -158,13 +160,13 @@
 			}
 
 			.circle {
-				width: 8rem;
-				height: 8rem;
+				width: 10rem;
+				height: 10rem;
 				margin: 0 auto;
 				&:hover {
 					&::before {
-						width: 12rem;
-						height: 12rem;
+						width: 14rem;
+						height: 14rem;
 					}
 				}
 
@@ -176,6 +178,23 @@
 
 		nav {
 			display: none;
+		}
+	}
+
+	@media (max-width: 380px) {
+		min-height: 100vw;
+		.boxItens {
+			max-width: 90%;
+			.text {
+				bottom: 0;
+				p {
+					font-size: 0.85rem;
+				}
+			}
+			.circle {
+				position: relative;
+				top: calc(-20%);
+			}
 		}
 	}
 }
