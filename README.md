@@ -1,9 +1,10 @@
 
-# IP Address Tracker
+# Space Tourism
 
 [Desafio do FrontendMentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
 
-![Space](https://s10.gifyu.com/images/space3c3ccfaa6c0a6a93.md.gif)
+![space](https://user-images.githubusercontent.com/85125378/145115043-605e8435-8452-49b5-8f65-d593e37ce1fd.gif)
+
 
 &nbsp;
 
@@ -24,11 +25,7 @@ $ git clone https://github.com/ViktorHugodev/space-tourism.git
 
 ```
 # Acesse a pasta da aplicação
-$ cd ip-address-tracker
-
-# Crie um arquivo .env.local e coloque as variaveis
-# de ambiente baseado no arquivo .env.example que
-# se encontra na pasta ip-address-tracker
+$ cd space-tourism
 
 # Instale as dependências
 $ yarn
