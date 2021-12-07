@@ -38,7 +38,7 @@ export default function Destionation() {
               {data.destinations.map((destination, index) => (
                 <li key={destination.name}>
                   <button
-                    className={activeDestination === index ? styles.Active : ''}
+                    className={activeDestination === index ? styles.Active : styles.animation}
                     onClick={() => setActiveDestination(index)}>{destination.name}</button>
                 </li>
 

@@ -9,6 +9,7 @@
 	z-index: 10;
 	left: 0;
 	right: 0;
+	animation: bg-blur 1000ms ease-in;
 
 	.image {
 		width: 4rem;
@@ -27,14 +28,17 @@
 		height: 6rem;
 		display: flex;
 		justify-content: center;
-
+		// position: relative;
 		align-items: center;
 		ul {
+			// position: relative;
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			gap: 6rem;
 
 			li {
+				animation: navbar 500ms ease-in;
+				position: relative;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -65,6 +69,7 @@
 			font-family: 'Barlow Condensed';
 			font-weight: 400;
 			text-transform: uppercase;
+
 			letter-spacing: 2.7px;
 			cursor: pointer;
 
@@ -222,5 +227,23 @@
 				}
 			}
 		}
+	}
+}
+@keyframes bg-blur {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes navbar {
+	from {
+		right: -100%;
+		opacity: 0;
+	}
+	to {
+		right: 0;
+		opacity: 1;
 	}
 }
