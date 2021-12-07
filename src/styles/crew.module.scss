@@ -28,26 +28,31 @@
 		margin: 0 4rem;
 		.picture {
 			display: block;
+			animation: changeOpacity 1s cubic-bezier(0, 0.4, 0.57, 0.48) 1 forwards;
 			align-self: flex-end;
 
 			position: relative;
 		}
 
 		.bio {
+			animation: changeOpacity 1s cubic-bezier(0, 0.4, 0.57, 0.48) 1 reverse;
 			display: flex;
 			flex-direction: column;
 
 			span {
+				animation: text2 250ms ease-in-out 1000ms 1 forwards;
 				font-family: 'Bellefair', sans-serif;
 				font-size: 2rem;
 				color: #fff;
 				text-transform: uppercase;
 				font-weight: normal;
-				opacity: 0.5;
+				opacity: 0;
 				mix-blend-mode: normal;
+				position: relative;
 			}
 
 			h4 {
+				animation: text 250ms ease-in-out 1250ms 1 forwards;
 				text-transform: uppercase;
 				font-family: 'Bellefair', sans-serif;
 				font-size: 3.5rem;
@@ -55,9 +60,12 @@
 				text-transform: uppercase;
 				font-weight: normal;
 				// margin-bottom: 2rem;
+				position: relative;
+				opacity: 0;
 			}
 
 			p {
+				animation: text 250ms ease-in-out 1500ms 1 forwards;
 				color: var(--light-blue);
 				font-size: 1rem;
 				font-family: 'Barlow', sans-serif;
@@ -65,6 +73,8 @@
 				width: 28rem;
 				line-height: 1.7;
 				letter-spacing: 0.5px;
+				position: relative;
+				opacity: 0;
 			}
 
 			ul {
@@ -109,6 +119,7 @@
 		}
 
 		.main {
+			animation: left 1s ease-in 250ms 1 forwards;
 			position: relative;
 			top: 100px;
 			display: grid;
@@ -223,5 +234,38 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes text {
+	from {
+		top: -40px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes text2 {
+	from {
+		top: -40px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 0.5;
+	}
+}
+
+@keyframes changeOpacity {
+	0% {
+		left: 50px;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
 	}
 }

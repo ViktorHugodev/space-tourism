@@ -57,6 +57,9 @@
 			display: flex;
 			flex-direction: column;
 			gap: 0.5rem;
+			position: relative;
+			animation: changeOpacity 1s cubic-bezier(0, 0.4, 0.57, 0.48) 1 forwards;
+			opacity: 0;
 			span {
 				text-transform: uppercase;
 
@@ -168,5 +171,15 @@
 				}
 			}
 		}
+	}
+}
+@keyframes changeOpacity {
+	0% {
+		left: 50px;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
 	}
 }

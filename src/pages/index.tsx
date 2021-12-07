@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { NavBar } from '../components/NavBar'
 import styles from '../styles/Home.module.scss'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +19,12 @@ const Home: NextPage = () => {
           <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
         </div>
         <div className={styles.circle}>
-          <h4>EXPLORE</h4>
+          <Link href="/destination">
+            <a  >
+
+              EXPLORE
+            </a>
+          </Link>
         </div>
       </main>
 
